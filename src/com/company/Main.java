@@ -1,8 +1,4 @@
 package com.company;
-import java.io.File;
-import java.lang.Object;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -13,7 +9,7 @@ public class Main {
         Letters l = new Letters();
         Logic sol = new Logic(f);
         String currentWord= "crane";
-        System.out.println("");
+        System.out.println();
         System.out.println("Mark green letter with 'g', yellow with 'y', and letters not in word with any other character");
         System.out.println("First Word: ");
         while(true){
