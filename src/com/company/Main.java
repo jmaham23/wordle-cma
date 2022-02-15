@@ -12,7 +12,7 @@ public class Main {
         FileInput f = new FileInput();
         Letters l = new Letters();
         Logic sol = new Logic(f);
-        String currentWord= "roate";
+        String currentWord= "crane";
         System.out.println("");
         System.out.println("Mark green letter with 'g', yellow with 'y', and letters not in word with any other character");
         System.out.println("First Word: ");
@@ -29,17 +29,14 @@ public class Main {
                 if(res.equals("g")){
                     l.setLetter(i, currentWord.charAt(i));
                     System.out.println("Letter: "+ currentWord.charAt(i) + " has been added to valid letter at spot" + i + ".");
-                    System.out.println(l.getLetterList().indexOf(currentWord.charAt(i)));
                 }
                 else if(res.equals("y")){
-                    l.addLetter(currentWord.charAt(i));
+                    l.addLetter(i, currentWord.charAt(i));
                     System.out.println("Letter: "+ currentWord.charAt(i) +" has been added as a vagrant letter.");
-                    System.out.println(l.getVagrantList().size());
                 }
                 else{
                     l.removeLetter(i, currentWord.charAt(i));
                     System.out.println("Letter: "+ currentWord.charAt(i) + " has been removed from possible letters.");
-                    System.out.println(l.getRemovedList().size());
                 }
             }
             sol.solve(l);

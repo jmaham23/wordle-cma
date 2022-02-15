@@ -34,10 +34,11 @@ public class Letters {
         letterList.set(index, c);
     }
 
-    public void addLetter(char c){
+    public void addLetter(int index, char c){
         if(vagrantLetters.indexOf(c)==-1) {
             vagrantLetters.add(c);
         }
+        complementLetters.set(index, c);
     }
     public void removeLetter(int index, char c){
         if(letterList.contains(c)){
